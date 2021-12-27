@@ -1,0 +1,5 @@
+DELETE FROM Actor
+DELETE FROM Genre
+DELETE FROM Director
+
+DELETE FROM Movie
