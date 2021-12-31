@@ -18,12 +18,12 @@ public class MovieTableModel extends AbstractTableModel{
     
     private List<Movie> articles;
 
-    public MovieTableModel(List<Movie> articles) {
-        this.articles = articles;
+    public MovieTableModel(List<Movie> movies) {
+        this.articles = movies;
     }
 
-    public void setArticles(List<Movie> articles) {
-        this.articles = articles;
+    public void setMovies(List<Movie> movies) {
+        this.articles = movies;
         fireTableDataChanged();
     }
 

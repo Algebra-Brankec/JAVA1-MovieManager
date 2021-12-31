@@ -329,7 +329,7 @@ public class EditMoviesPanel extends javax.swing.JPanel {
                         ""
                 );
                 repository.createMovie(article);
-                articlesTableModel.setArticles(repository.selectMovies());
+                articlesTableModel.setMovies(repository.selectMovies());
 
                 clearForm();
             } catch (Exception ex) {
@@ -369,7 +369,7 @@ public class EditMoviesPanel extends javax.swing.JPanel {
                 selectedMovie.setPublishedDate(LocalDateTime.parse(tfPublishedDate.getText().trim(), Movie.DATE_FORMATTER));
 
                 repository.updateMovie(selectedMovie.getId(), selectedMovie);
-                articlesTableModel.setArticles(repository.selectMovies());
+                articlesTableModel.setMovies(repository.selectMovies());
 
                 clearForm();
             } catch (Exception ex) {
@@ -387,14 +387,14 @@ public class EditMoviesPanel extends javax.swing.JPanel {
             return;
         }
         if (MessageUtils.showConfirmDialog(
-                "Delete article",
-                "Do you really want to delete article?") == JOptionPane.YES_OPTION) {
+                "Delete movie",
+                "Do you really want to delete the movie?") == JOptionPane.YES_OPTION) {
             try {
                 if (selectedMovie.getPicturePath() != null) {
                     Files.deleteIfExists(Paths.get(selectedMovie.getPicturePath()));
                 }
                 repository.deleteMovie(selectedMovie.getId());
-                articlesTableModel.setArticles(repository.selectMovies());
+                articlesTableModel.setMovies(repository.selectMovies());
 
                 clearForm();
             } catch (Exception ex) {

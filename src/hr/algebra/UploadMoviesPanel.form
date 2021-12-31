@@ -25,8 +25,9 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" pref="1180" max="32767" attributes="0"/>
-                  <Component id="btnUploadArticles" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" pref="1380" max="32767" attributes="0"/>
+                  <Component id="btnDeleteMovies" alignment="0" max="32767" attributes="0"/>
+                  <Component id="btnUploadMovies" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -37,21 +38,23 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="651" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnUploadArticles" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+              <Component id="btnUploadMovies" min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnDeleteMovies" min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="btnUploadArticles">
+    <Component class="javax.swing.JButton" name="btnDeleteMovies">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Upload Articles"/>
+        <Property name="text" type="java.lang.String" value="Delete Movies"/>
         <Property name="actionCommand" type="java.lang.String" value="Upload articles"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUploadArticlesActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteMoviesActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -73,5 +76,14 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="btnUploadMovies">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Upload Movies"/>
+        <Property name="actionCommand" type="java.lang.String" value="Upload articles"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUploadMoviesActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>
